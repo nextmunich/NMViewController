@@ -136,15 +136,7 @@
 #pragma mark Init
 
 - (id)init {
-	if ((self = [super initWithFrame:CGRectMake(0, 0, 100, 100)])) {
-		// load the view's layout, maintaining the rect that was set in the nib
-		[self loadViewWithNibName:nil bundle:nil];
-		
-		// re-layout (in case of a view which changes layouts automatically)
-		[self layoutSubviews];
-	}
-	
-	return self;
+	return [self initWithNibName:nil bundle:nil];
 }
 
 - (id)initWithNibName:(NSString*)name bundle:(NSBundle*)bundle {
