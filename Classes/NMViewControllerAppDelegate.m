@@ -9,6 +9,7 @@
 #import "NMViewControllerAppDelegate.h"
 
 #import "NMUITabBar.h"
+#import "SwitchTabBar.h"
 
 
 
@@ -27,7 +28,11 @@
 	tabTwoController.title = @"Second";
 	
 	// setup of NMTabBarController before view is loaded
+#ifdef UITABBAR
 	tabBarController.tabBar = [[[NMUITabBar alloc] init] autorelease];
+#elif SWITCHTABBAR
+	tabBarController.tabBar = [[[SwitchTabBar alloc] init] autorelease];
+#endif
 	tabBarController.viewControllers = [NSArray arrayWithObjects:tabOneController, tabTwoController, nil];
 	
     // Override point for customization after application launch.

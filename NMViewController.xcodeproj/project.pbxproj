@@ -21,6 +21,39 @@
 		435519FA138FCE210080F87C /* TabTwoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 435519F8138FCE210080F87C /* TabTwoController.m */; };
 		435519FB138FCE210080F87C /* TabTwoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 435519F9138FCE210080F87C /* TabTwoController.xib */; };
 		43551A12138FD0410080F87C /* NMUITabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 43551A11138FD0410080F87C /* NMUITabBar.m */; };
+		43551B44138FE3E80080F87C /* SwitchTabBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43551B41138FE3E80080F87C /* SwitchTabBar.xib */; };
+		43551B45138FE3E80080F87C /* SwitchTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 43551B42138FE3E80080F87C /* SwitchTabBar.m */; };
+		43551B80138FE6570080F87C /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43F01DE711D37F8A001C4390 /* MainWindow.xib */; };
+		43551B81138FE6570080F87C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 43DF9D16130C8AA700F758D1 /* Localizable.strings */; };
+		43551B82138FE6570080F87C /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 43DF9D29130C8C2900F758D1 /* Icon-72.png */; };
+		43551B83138FE6570080F87C /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 43DF9D2A130C8C2900F758D1 /* Icon-Small-50.png */; };
+		43551B84138FE6570080F87C /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = 43DF9D2B130C8C2900F758D1 /* Icon-Small.png */; };
+		43551B85138FE6570080F87C /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = 43DF9D2F130C8C2900F758D1 /* iTunesArtwork */; };
+		43551B86138FE6570080F87C /* NMTabBarController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 435519CA138FAC870080F87C /* NMTabBarController.xib */; };
+		43551B87138FE6570080F87C /* TabOneController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 435519F4138FCE1A0080F87C /* TabOneController.xib */; };
+		43551B88138FE6570080F87C /* TabTwoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 435519F9138FCE210080F87C /* TabTwoController.xib */; };
+		43551B89138FE6570080F87C /* SwitchTabBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43551B41138FE3E80080F87C /* SwitchTabBar.xib */; };
+		43551B8B138FE6570080F87C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		43551B8C138FE6570080F87C /* NMViewControllerAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* NMViewControllerAppDelegate.m */; };
+		43551B8D138FE6570080F87C /* UIImage+NMNSCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 43917031134079C000E41540 /* UIImage+NMNSCoding.m */; };
+		43551B8E138FE6570080F87C /* UIView+NMTemplating.m in Sources */ = {isa = PBXBuildFile; fileRef = 43917033134079C000E41540 /* UIView+NMTemplating.m */; };
+		43551B8F138FE6570080F87C /* NMViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 43917036134079C000E41540 /* NMViewLayout.m */; };
+		43551B90138FE6570080F87C /* NMViewLayoutOmitSubviewsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 43917038134079C000E41540 /* NMViewLayoutOmitSubviewsView.m */; };
+		43551B91138FE6570080F87C /* NMViewLayoutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4391703A134079C000E41540 /* NMViewLayoutView.m */; };
+		43551B92138FE6570080F87C /* NMView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4391703C134079C000E41540 /* NMView.m */; };
+		43551B93138FE6570080F87C /* NMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 435519B5138FAC700080F87C /* NMViewController.m */; };
+		43551B94138FE6570080F87C /* NMTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 435519C9138FAC870080F87C /* NMTabBarController.m */; };
+		43551B95138FE6570080F87C /* NMTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 435519DF138FC1DE0080F87C /* NMTabBar.m */; };
+		43551B96138FE6570080F87C /* TabOneController.m in Sources */ = {isa = PBXBuildFile; fileRef = 435519F3138FCE1A0080F87C /* TabOneController.m */; };
+		43551B97138FE6570080F87C /* TabTwoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 435519F8138FCE210080F87C /* TabTwoController.m */; };
+		43551B98138FE6570080F87C /* NMUITabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 43551A11138FD0410080F87C /* NMUITabBar.m */; };
+		43551B99138FE6570080F87C /* SwitchTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 43551B42138FE3E80080F87C /* SwitchTabBar.m */; };
+		43551B9B138FE6570080F87C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		43551B9C138FE6570080F87C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		43551B9D138FE6570080F87C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
+		43551B9E138FE6570080F87C /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43BABA4F1281D99600F8445F /* StoreKit.framework */; };
+		43551B9F138FE6570080F87C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43BABA531281D99F00F8445F /* CoreLocation.framework */; };
+		43551BA0138FE6570080F87C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43BABA5E1281DA8B00F8445F /* SystemConfiguration.framework */; };
 		4391703D134079C000E41540 /* UIImage+NMNSCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 43917031134079C000E41540 /* UIImage+NMNSCoding.m */; };
 		4391703E134079C000E41540 /* UIView+NMTemplating.m in Sources */ = {isa = PBXBuildFile; fileRef = 43917033134079C000E41540 /* UIView+NMTemplating.m */; };
 		4391703F134079C000E41540 /* NMViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 43917036134079C000E41540 /* NMViewLayout.m */; };
@@ -63,6 +96,10 @@
 		435519F9138FCE210080F87C /* TabTwoController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabTwoController.xib; sourceTree = "<group>"; };
 		43551A10138FD0410080F87C /* NMUITabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMUITabBar.h; sourceTree = "<group>"; };
 		43551A11138FD0410080F87C /* NMUITabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMUITabBar.m; sourceTree = "<group>"; };
+		43551B41138FE3E80080F87C /* SwitchTabBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SwitchTabBar.xib; sourceTree = "<group>"; };
+		43551B42138FE3E80080F87C /* SwitchTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwitchTabBar.m; sourceTree = "<group>"; };
+		43551B43138FE3E80080F87C /* SwitchTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwitchTabBar.h; sourceTree = "<group>"; };
+		43551BA6138FE6570080F87C /* NMViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NMViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43917030134079C000E41540 /* UIImage+NMNSCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+NMNSCoding.h"; sourceTree = "<group>"; };
 		43917031134079C000E41540 /* UIImage+NMNSCoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+NMNSCoding.m"; sourceTree = "<group>"; };
 		43917032134079C000E41540 /* UIView+NMTemplating.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+NMTemplating.h"; sourceTree = "<group>"; };
@@ -105,6 +142,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		43551B9A138FE6570080F87C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43551B9B138FE6570080F87C /* Foundation.framework in Frameworks */,
+				43551B9C138FE6570080F87C /* UIKit.framework in Frameworks */,
+				43551B9D138FE6570080F87C /* CoreGraphics.framework in Frameworks */,
+				43551B9E138FE6570080F87C /* StoreKit.framework in Frameworks */,
+				43551B9F138FE6570080F87C /* CoreLocation.framework in Frameworks */,
+				43551BA0138FE6570080F87C /* SystemConfiguration.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		43F01D8B11D37D94001C4390 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -119,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				435B0B0B12E5B0ED00A97B55 /* Controller */,
+				43551B40138FE3BB0080F87C /* Sample Tab Bars */,
 				1D3623240D0F684500981E51 /* NMViewControllerAppDelegate.h */,
 				1D3623250D0F684500981E51 /* NMViewControllerAppDelegate.m */,
 			);
@@ -130,6 +181,7 @@
 			children = (
 				1D6058910D05DD3D006BFB54 /* NMViewController.app */,
 				43F01D8E11D37D94001C4390 /* UnitTests.octest */,
+				43551BA6138FE6570080F87C /* NMViewController.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -230,6 +282,16 @@
 			name = "Tab Bar Controller";
 			sourceTree = "<group>";
 		};
+		43551B40138FE3BB0080F87C /* Sample Tab Bars */ = {
+			isa = PBXGroup;
+			children = (
+				43551B43138FE3E80080F87C /* SwitchTabBar.h */,
+				43551B42138FE3E80080F87C /* SwitchTabBar.m */,
+				43551B41138FE3E80080F87C /* SwitchTabBar.xib */,
+			);
+			name = "Sample Tab Bars";
+			sourceTree = "<group>";
+		};
 		435B0B0B12E5B0ED00A97B55 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -310,9 +372,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1D6058900D05DD3D006BFB54 /* NMViewController */ = {
+		1D6058900D05DD3D006BFB54 /* NMUITabBar */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "NMViewController" */;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "NMUITabBar" */;
 			buildPhases = (
 				1D60588D0D05DD3D006BFB54 /* Resources */,
 				1D60588E0D05DD3D006BFB54 /* Sources */,
@@ -322,9 +384,26 @@
 			);
 			dependencies = (
 			);
-			name = NMViewController;
+			name = NMUITabBar;
 			productName = NMViewController;
 			productReference = 1D6058910D05DD3D006BFB54 /* NMViewController.app */;
+			productType = "com.apple.product-type.application";
+		};
+		43551B7E138FE6570080F87C /* SwitchTabBar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 43551BA1138FE6570080F87C /* Build configuration list for PBXNativeTarget "SwitchTabBar" */;
+			buildPhases = (
+				43551B7F138FE6570080F87C /* Resources */,
+				43551B8A138FE6570080F87C /* Sources */,
+				43551B9A138FE6570080F87C /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwitchTabBar;
+			productName = NMViewController;
+			productReference = 43551BA6138FE6570080F87C /* NMViewController.app */;
 			productType = "com.apple.product-type.application";
 		};
 		43F01D8D11D37D94001C4390 /* UnitTests */ = {
@@ -367,7 +446,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1D6058900D05DD3D006BFB54 /* NMViewController */,
+				1D6058900D05DD3D006BFB54 /* NMUITabBar */,
+				43551B7E138FE6570080F87C /* SwitchTabBar */,
 				43F01D8D11D37D94001C4390 /* UnitTests */,
 			);
 		};
@@ -387,6 +467,24 @@
 				435519CE138FAC870080F87C /* NMTabBarController.xib in Resources */,
 				435519F6138FCE1A0080F87C /* TabOneController.xib in Resources */,
 				435519FB138FCE210080F87C /* TabTwoController.xib in Resources */,
+				43551B44138FE3E80080F87C /* SwitchTabBar.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43551B7F138FE6570080F87C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43551B80138FE6570080F87C /* MainWindow.xib in Resources */,
+				43551B81138FE6570080F87C /* Localizable.strings in Resources */,
+				43551B82138FE6570080F87C /* Icon-72.png in Resources */,
+				43551B83138FE6570080F87C /* Icon-Small-50.png in Resources */,
+				43551B84138FE6570080F87C /* Icon-Small.png in Resources */,
+				43551B85138FE6570080F87C /* iTunesArtwork in Resources */,
+				43551B86138FE6570080F87C /* NMTabBarController.xib in Resources */,
+				43551B87138FE6570080F87C /* TabOneController.xib in Resources */,
+				43551B88138FE6570080F87C /* TabTwoController.xib in Resources */,
+				43551B89138FE6570080F87C /* SwitchTabBar.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,6 +532,29 @@
 				435519F5138FCE1A0080F87C /* TabOneController.m in Sources */,
 				435519FA138FCE210080F87C /* TabTwoController.m in Sources */,
 				43551A12138FD0410080F87C /* NMUITabBar.m in Sources */,
+				43551B45138FE3E80080F87C /* SwitchTabBar.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43551B8A138FE6570080F87C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43551B8B138FE6570080F87C /* main.m in Sources */,
+				43551B8C138FE6570080F87C /* NMViewControllerAppDelegate.m in Sources */,
+				43551B8D138FE6570080F87C /* UIImage+NMNSCoding.m in Sources */,
+				43551B8E138FE6570080F87C /* UIView+NMTemplating.m in Sources */,
+				43551B8F138FE6570080F87C /* NMViewLayout.m in Sources */,
+				43551B90138FE6570080F87C /* NMViewLayoutOmitSubviewsView.m in Sources */,
+				43551B91138FE6570080F87C /* NMViewLayoutView.m in Sources */,
+				43551B92138FE6570080F87C /* NMView.m in Sources */,
+				43551B93138FE6570080F87C /* NMViewController.m in Sources */,
+				43551B94138FE6570080F87C /* NMTabBarController.m in Sources */,
+				43551B95138FE6570080F87C /* NMTabBar.m in Sources */,
+				43551B96138FE6570080F87C /* TabOneController.m in Sources */,
+				43551B97138FE6570080F87C /* TabTwoController.m in Sources */,
+				43551B98138FE6570080F87C /* NMUITabBar.m in Sources */,
+				43551B99138FE6570080F87C /* SwitchTabBar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,6 +578,10 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = NMViewController_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					UITABBAR,
+					"CONFIGURATION_${CONFIGURATION}",
+				);
 				INFOPLIST_FILE = "Resources/NMViewController-Info.plist";
 				PRODUCT_NAME = NMViewController;
 			};
@@ -469,6 +594,10 @@
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = NMViewController_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					UITABBAR,
+					"CONFIGURATION_${CONFIGURATION}",
+				);
 				INFOPLIST_FILE = "Resources/NMViewController-Info.plist";
 				PRODUCT_NAME = NMViewController;
 				VALIDATE_PRODUCT = YES;
@@ -514,6 +643,10 @@
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = NMViewController_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					UITABBAR,
+					"CONFIGURATION_${CONFIGURATION}",
+				);
 				INFOPLIST_FILE = "Resources/NMViewController-Info.plist";
 				PRODUCT_NAME = NMViewController;
 				VALIDATE_PRODUCT = YES;
@@ -547,6 +680,76 @@
 				SDKROOT = iphonesimulator4.0;
 				WRAPPER_EXTENSION = octest;
 				ZERO_LINK = NO;
+			};
+			name = Distribution;
+		};
+		43551BA2138FE6570080F87C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = NMViewController_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					SWITCHTABBAR,
+					"CONFIGURATION_${CONFIGURATION}",
+				);
+				INFOPLIST_FILE = "Resources/NMViewController-Info.plist";
+				PRODUCT_NAME = NMViewController;
+			};
+			name = Debug;
+		};
+		43551BA3138FE6570080F87C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = NMViewController_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					SWITCHTABBAR,
+					"CONFIGURATION_${CONFIGURATION}",
+				);
+				INFOPLIST_FILE = "Resources/NMViewController-Info.plist";
+				PRODUCT_NAME = NMViewController;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		43551BA4138FE6570080F87C /* Enterprise */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = NMViewController_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					SWITCHTABBAR,
+					"CONFIGURATION_${CONFIGURATION}",
+				);
+				INFOPLIST_FILE = "Resources/NMViewController-Info.plist";
+				PRODUCT_NAME = NMViewController;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Enterprise;
+		};
+		43551BA5138FE6570080F87C /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_ENTITLEMENTS = Entitlements.plist;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = NMViewController_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					SWITCHTABBAR,
+					"CONFIGURATION_${CONFIGURATION}",
+				);
+				INFOPLIST_FILE = "Resources/NMViewController-Info.plist";
+				PRODUCT_NAME = NMViewController;
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Distribution;
 		};
@@ -588,6 +791,10 @@
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = NMViewController_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					UITABBAR,
+					"CONFIGURATION_${CONFIGURATION}",
+				);
 				INFOPLIST_FILE = "Resources/NMViewController-Info.plist";
 				PRODUCT_NAME = NMViewController;
 				VALIDATE_PRODUCT = YES;
@@ -744,13 +951,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "NMViewController" */ = {
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "NMUITabBar" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1D6058940D05DD3E006BFB54 /* Debug */,
 				1D6058950D05DD3E006BFB54 /* Release */,
 				435B0B1A12E5B0F700A97B55 /* Enterprise */,
 				434D8B2512E9FDE3000531C4 /* Distribution */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		43551BA1138FE6570080F87C /* Build configuration list for PBXNativeTarget "SwitchTabBar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43551BA2138FE6570080F87C /* Debug */,
+				43551BA3138FE6570080F87C /* Release */,
+				43551BA4138FE6570080F87C /* Enterprise */,
+				43551BA5138FE6570080F87C /* Distribution */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

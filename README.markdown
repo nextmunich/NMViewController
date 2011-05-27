@@ -31,9 +31,39 @@ iOS - it's going to help.
 # NMTabBarController
 
 A re-implementation of a UITabBarController which allows for a custom look and feel
-of the tab bar. It comes with a default implementation of NMTabBar that provides the
-iOS default look and feel. Take a look at the implementation of NMUITabBar to see
-how you can implement your own NMTabBar subclass.
+of the tab bar. It comes with a default implementation of NMTabBar called NMUITabBar
+that provides the iOS default look and feel.
+
+The architectural decision behind NMTabBarController was to free the implementation
+from an object like UITabBarItem. Without the contraints of the data that can be
+communicated using UITabBarItem, an NMTabBar hosted by NMTabBarController can display
+its tabs in whichever way it chooses. Here are some examples of how it can be
+implemented:
+
+1. NMUITabBar just reuses UITabBar and UITabBarItems to implement the look and feel
+   of the tab bar.
+2. SwitchTabBar makes the assumption that exactly two UIViewControllers will be added
+   to the NMTabBarController and allows switching between the two.
+3. An implementation could make use of a different property defined on your custom
+   UIViewControllers and will use that property for configuring the look of the items
+   on the tab bar.
+4. An implementation could use the data stored in UITabBarItem and display it in a
+   completely different fashion.
+   
+... the sky's the limit!
+
+One feature explicitly not implemented is customization of the NMTabBarController's
+tabs. We've never had the necessity to make use of that feature - therefore it's not
+available.
+
+NMTabBarController explicitly handles NMTabBars of different heights, correctly
+resizing the content area as necessary. When adding your UIViewControllers' views to
+its content area, it sets their respective view's autoresizingMask so that it fills
+the content area whenever it's resized (eg. during a rotation).
+
+Check out the sample targets NMUITabBar and SwitchTabBar to see two completely
+different tab bar implementations in action. Rotate the device to see the hosted
+UIViewController's autoresize to the new orientation.
 
 
 # Future

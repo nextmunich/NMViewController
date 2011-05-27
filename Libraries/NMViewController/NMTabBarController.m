@@ -150,8 +150,6 @@
 
 - (void)addTabBarAsSubview {
 	if (tabBar != nil) {
-		NSLog(@"tab bar: %@", tabBar);
-		
 		tabBarContainer.bounds = CGRectMake(0, 0, tabBarContainer.bounds.size.width, tabBar.bounds.size.height);
 		tabBarContainer.center = CGPointMake(tabBarContainer.center.x, self.view.bounds.size.height-tabBar.bounds.size.height/2);
 		viewControllerContainer.frame = CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height-tabBar.bounds.size.height);
@@ -159,9 +157,6 @@
 		tabBar.frame = tabBarContainer.bounds;
 		tabBar.autoresizingMask = (UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight);
 		[tabBarContainer addSubview:tabBar];
-		
-		NSLog(@"tab bar container: %@", tabBarContainer);
-		NSLog(@"tab bar: %@", tabBar);
 		
 		if (viewControllers != nil) {
 			[tabBar setTabsForViewControllers:viewControllers];
