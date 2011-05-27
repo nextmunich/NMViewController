@@ -1,6 +1,6 @@
 //
 //  NMTabBarController.h
-//  Gamedisk
+//  NMViewController
 //
 //  Created by Benjamin Broll on 10.11.10.
 //  Copyright 2010 NEXT Munich. The App Agency. All rights reserved.
