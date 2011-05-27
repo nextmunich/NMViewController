@@ -3,7 +3,7 @@
 //  NMViewController
 //
 //  Created by Benjamin Broll on 27.05.11.
-//  Copyright NEXT Munich. The App Agency. 2011. All rights reserved.
+//  Copyright 2011 NEXT Munich GmbH. The App Agency. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
