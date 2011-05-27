@@ -120,6 +120,13 @@
  * UIView objects in -loadView or -viewDidLoad) or implicitly (eg. by assigning
  * objects to IBOutlets during nib loading) retained.
  *
+ * As another example of what has to be unloaded in -unloadViewReferences,
+ * suppose in the example above your slideshow screen contains a scroll view
+ * into which you dynamically add UIImageView objects in your -viewDidLoad
+ * method. Now you need to keep track of those UIImageView objects in an NSArray
+ * for easy manipulation of their images. In that case, the UIImageView objects
+ * have to be removed from the array in your -unloadViewReferences method.
+ *
  *
  * Cached Data
  * ============
