@@ -8,9 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+#import "NMViewController.h"
 
-@interface TabOneController : UIViewController {
 
+@interface TabOneController : NMViewController {
+
+	UILabel *titleLabel;
+	
 }
+
+@property (nonatomic, retain) IBOutlet UILabel *titleLabel;
 
 @end

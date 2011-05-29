@@ -43,6 +43,9 @@
 - (void)showCurrentViewController;
 - (void)hideCurrentViewController;
 
+- (void)showViewController:(UIViewController *)vc;
+- (void)hideViewController:(UIViewController *)vc;
+
 - (void)addTabBarAsSubview;
 
 @end
@@ -120,29 +123,41 @@
 
 - (void)showCurrentViewController {
 	if ([self isViewLoaded]) {
-		self.selectedViewController.view.frame = viewControllerContainer.bounds;
-		self.selectedViewController.view.autoresizingMask = (UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight);
-		
-		[viewControllerContainer addSubview:self.selectedViewController.view];
-		[self.selectedViewController viewWillAppear:NO];
-		[self.selectedViewController viewDidAppear:NO];
+		[self showViewController:self.selectedViewController];
 	}
 }
 
 - (void)hideCurrentViewController {
 	if (self.selectedViewController.view.superview != nil) {
-		[self.selectedViewController viewWillDisappear:NO];
-		[self.selectedViewController viewDidDisappear:NO];
-		[self.selectedViewController.view removeFromSuperview];
+		[self hideViewController:self.selectedViewController];
 	} else if (self.selectedIndex == NSNotFound) {
 		for (UIViewController* vc in viewControllers) {
 			if ([vc isViewLoaded]) {
-				[vc viewWillDisappear:NO];
-				[vc viewDidDisappear:NO];
-				[vc.view removeFromSuperview];
+				[self hideViewController:vc];
 			}
 		}
 	}
+}
+
+- (void)showViewController:(UIViewController *)vc {
+	vc.view.frame = viewControllerContainer.bounds;
+	vc.view.autoresizingMask = (UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight);
+	
+	// mimics the behavior of UITabBarController:
+	// the VC's view is added to its container before the controller is sent the
+	// -viewWillAppear: message
+	[viewControllerContainer addSubview:self.selectedViewController.view];
+	[vc viewWillAppear:NO];
+	[vc viewDidAppear:NO];
+}
+
+- (void)hideViewController:(UIViewController *)vc {
+	[vc viewWillDisappear:NO];
+	// mimics the behavior of UITabBarController:
+	// the VC's view is removed from the superview before it is sent
+	// the -viewDidDisappear: message
+	[vc.view removeFromSuperview];
+	[vc viewDidDisappear:NO];	
 }
 
 
