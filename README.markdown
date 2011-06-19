@@ -66,6 +66,19 @@ different tab bar implementations in action. Rotate the device to see the hosted
 UIViewController's autoresize to the new orientation.
 
 
+# NMNavigationController
+
+Finally, a re-implementation of UINavigationController is now available, too. Similar
+to NMTabBarController, NMNavigationController allows you to use custom navigation
+bars with a custom look and feel. Like NMUITabBar, NMUINavigationBar provides an
+implementation of NMNavigationBar with the default iOS look and feel.
+
+Most of the methods available on a UINavigationController are available on
+NMNavigationController, too. The delegate protocol of NMNavigationController is a
+little rough around the edges but provides you with the most fundamental
+notifications.
+
+
 # Future
 
 NMNavigationController will be next, it just needs some additional developer love.
