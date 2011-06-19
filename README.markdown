@@ -81,4 +81,6 @@ notifications.
 
 # Future
 
-NMNavigationController will be next, it just needs some additional developer love.
+Re-implementations of UITabBarController and UINavigationController have been the
+classes we've used in a couple of projects now. As for other UIViewControllers,
+we'll implement them as the need arises.
