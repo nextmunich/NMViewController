@@ -8,6 +8,7 @@
 
 #import "NMViewControllerAppDelegate.h"
 
+#import "NMUINavigationBar.h"
 #import "NMUITabBar.h"
 #import "SwitchTabBar.h"
 
@@ -17,29 +18,78 @@
 
 #pragma mark Properties
 
-@synthesize window, tabBarController, tabOneController, tabTwoController;
+@synthesize window, nmTabBarController, nmNavigationController, tabOneController, tabTwoController, tabThreeController;
 
 
 #pragma mark Application lifecycle
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 	// setup controller titles
 	tabOneController.title = @"First";
 	tabTwoController.title = @"Second";
+	tabThreeController.title = @"Third";
 	
 	// setup of NMTabBarController before view is loaded
 #ifdef UITABBAR
-	tabBarController.tabBar = [[[NMUITabBar alloc] init] autorelease];
+	nmTabBarController.tabBar = [[[NMUITabBar alloc] init] autorelease];
 #elif SWITCHTABBAR
-	tabBarController.tabBar = [[[SwitchTabBar alloc] init] autorelease];
+	nmTabBarController.tabBar = [[[SwitchTabBar alloc] init] autorelease];
 #endif
-	tabBarController.viewControllers = [NSArray arrayWithObjects:tabOneController, tabTwoController, nil];
 	
-    // Override point for customization after application launch.
-	[window addSubview:tabBarController.view];
+	//nmTabBarController.viewControllers = [NSArray arrayWithObjects:tabOneController, tabTwoController, nil];
+	//[window addSubview:nmTabBarController.view];
+	
+	//tabBarController = [[UITabBarController alloc] init];
+	//tabBarController.viewControllers = nmTabBarController.viewControllers;
+	//[window addSubview:tabBarController.view];
+	
+	nmNavigationController.navigationBar = [[[NMUINavigationBar alloc] init] autorelease];
+	[nmNavigationController pushViewController:tabOneController animated:NO];
+	[window addSubview:nmNavigationController.view];
+	[self performSelector:@selector(nmPushVC:) withObject:tabTwoController afterDelay:5];
+	
+	//navigationController = [[UINavigationController alloc] initWithRootViewController:tabOneController];
+	//[window addSubview:navigationController.view];
+	//[self performSelector:@selector(pushVC:) withObject:tabTwoController afterDelay:5];
+	
     [window makeKeyAndVisible];
 	
+	
+	UITapGestureRecognizer *r = [[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(doubleTap)] autorelease];
+	r.numberOfTapsRequired = 2;
+	
+	[window addGestureRecognizer:r];
+	
+	
 	return YES;
+}
+
+
+- (void)nmPushVC:(UIViewController *)vc {
+	[nmNavigationController pushViewController:vc animated:YES];
+	/*if (vc == tabTwoController) {
+		[self performSelector:_cmd withObject:tabThreeController afterDelay:5];
+	}*/
+}
+
+- (void)pushVC:(UIViewController *)vc {
+	[navigationController pushViewController:vc animated:YES];
+	/*if (vc == tabTwoController) {
+		[self performSelector:_cmd withObject:tabThreeController afterDelay:5];
+	}*/
+}
+
+
+- (void)logNavController {
+	NSLog(@"tabOne. navVC: %@", tabOneController.navigationController);
+	NSLog(@"tabOne. nmNavVC: %@", tabOneController.nmNavigationController);
+}
+
+
+- (void)doubleTap {
+	/*[navigationController setViewControllers:[NSArray arrayWithObjects:tabOneController, tabThreeController, nil]
+									animated:YES];*/
+	nmNavigationController.topViewController = tabThreeController;
 }
 
 
@@ -61,7 +111,9 @@
 - (void)dealloc {
 	[tabOneController release];
 	[tabTwoController release];
-	[tabBarController release];
+	[tabThreeController release];
+	[nmNavigationController release];
+	[nmTabBarController release];
     [window release];
     [super dealloc];
 }

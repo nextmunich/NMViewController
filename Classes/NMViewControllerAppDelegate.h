@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+#import "NMNavigationController.h"
 #import "NMTabBarController.h"
 
 
@@ -15,16 +16,23 @@
 
     UIWindow *window;
 	
-	NMTabBarController *tabBarController;
+	NMTabBarController *nmTabBarController;
+	NMNavigationController *nmNavigationController;
 	UIViewController *tabOneController;
 	UIViewController *tabTwoController;
+	UIViewController *tabThreeController;
+	
+	UITabBarController *tabBarController;
+	UINavigationController *navigationController;
 	
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
-@property (nonatomic, retain) IBOutlet NMTabBarController *tabBarController;
+@property (nonatomic, retain) IBOutlet NMTabBarController *nmTabBarController;
+@property (nonatomic, retain) IBOutlet NMNavigationController *nmNavigationController;
 @property (nonatomic, retain) IBOutlet UIViewController *tabOneController;
 @property (nonatomic, retain) IBOutlet UIViewController *tabTwoController;
+@property (nonatomic, retain) IBOutlet UIViewController *tabThreeController;
 
 @end
 

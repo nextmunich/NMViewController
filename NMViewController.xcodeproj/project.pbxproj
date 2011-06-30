@@ -54,6 +54,12 @@
 		43551B9E138FE6570080F87C /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43BABA4F1281D99600F8445F /* StoreKit.framework */; };
 		43551B9F138FE6570080F87C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43BABA531281D99F00F8445F /* CoreLocation.framework */; };
 		43551BA0138FE6570080F87C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43BABA5E1281DA8B00F8445F /* SystemConfiguration.framework */; };
+		43551CBC13903B6B0080F87C /* NMNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43551CBA13903B6B0080F87C /* NMNavigationController.m */; };
+		43551CBD13903B6B0080F87C /* NMNavigationController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43551CBB13903B6B0080F87C /* NMNavigationController.xib */; };
+		43551DE11392904C0080F87C /* TabThreeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43551DDF1392904C0080F87C /* TabThreeController.m */; };
+		43551DE21392904C0080F87C /* TabThreeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43551DE01392904C0080F87C /* TabThreeController.xib */; };
+		43551F6E1392FFB60080F87C /* NMNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 43551F6D1392FFB60080F87C /* NMNavigationBar.m */; };
+		43551F71139300D40080F87C /* NMUINavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 43551F70139300D40080F87C /* NMUINavigationBar.m */; };
 		4391703D134079C000E41540 /* UIImage+NMNSCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 43917031134079C000E41540 /* UIImage+NMNSCoding.m */; };
 		4391703E134079C000E41540 /* UIView+NMTemplating.m in Sources */ = {isa = PBXBuildFile; fileRef = 43917033134079C000E41540 /* UIView+NMTemplating.m */; };
 		4391703F134079C000E41540 /* NMViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 43917036134079C000E41540 /* NMViewLayout.m */; };
@@ -100,6 +106,16 @@
 		43551B42138FE3E80080F87C /* SwitchTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwitchTabBar.m; sourceTree = "<group>"; };
 		43551B43138FE3E80080F87C /* SwitchTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwitchTabBar.h; sourceTree = "<group>"; };
 		43551BA6138FE6570080F87C /* NMViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NMViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		43551CB913903B6B0080F87C /* NMNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMNavigationController.h; sourceTree = "<group>"; };
+		43551CBA13903B6B0080F87C /* NMNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMNavigationController.m; sourceTree = "<group>"; };
+		43551CBB13903B6B0080F87C /* NMNavigationController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NMNavigationController.xib; sourceTree = "<group>"; };
+		43551DDE1392904C0080F87C /* TabThreeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabThreeController.h; sourceTree = "<group>"; };
+		43551DDF1392904C0080F87C /* TabThreeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabThreeController.m; sourceTree = "<group>"; };
+		43551DE01392904C0080F87C /* TabThreeController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabThreeController.xib; sourceTree = "<group>"; };
+		43551F6C1392FFB60080F87C /* NMNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMNavigationBar.h; sourceTree = "<group>"; };
+		43551F6D1392FFB60080F87C /* NMNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMNavigationBar.m; sourceTree = "<group>"; };
+		43551F6F139300D40080F87C /* NMUINavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMUINavigationBar.h; sourceTree = "<group>"; };
+		43551F70139300D40080F87C /* NMUINavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMUINavigationBar.m; sourceTree = "<group>"; };
 		43917030134079C000E41540 /* UIImage+NMNSCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+NMNSCoding.h"; sourceTree = "<group>"; };
 		43917031134079C000E41540 /* UIImage+NMNSCoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+NMNSCoding.m"; sourceTree = "<group>"; };
 		43917032134079C000E41540 /* UIView+NMTemplating.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+NMTemplating.h"; sourceTree = "<group>"; };
@@ -261,6 +277,7 @@
 		435519B3138FAC5F0080F87C /* NMViewController */ = {
 			isa = PBXGroup;
 			children = (
+				43551CBF13903B6E0080F87C /* Navigation Controller */,
 				435519DB138FC00F0080F87C /* Tab Bar Controller */,
 				435519B4138FAC700080F87C /* NMViewController.h */,
 				435519B5138FAC700080F87C /* NMViewController.m */,
@@ -292,6 +309,20 @@
 			name = "Sample Tab Bars";
 			sourceTree = "<group>";
 		};
+		43551CBF13903B6E0080F87C /* Navigation Controller */ = {
+			isa = PBXGroup;
+			children = (
+				43551CB913903B6B0080F87C /* NMNavigationController.h */,
+				43551CBA13903B6B0080F87C /* NMNavigationController.m */,
+				43551CBB13903B6B0080F87C /* NMNavigationController.xib */,
+				43551F6C1392FFB60080F87C /* NMNavigationBar.h */,
+				43551F6D1392FFB60080F87C /* NMNavigationBar.m */,
+				43551F6F139300D40080F87C /* NMUINavigationBar.h */,
+				43551F70139300D40080F87C /* NMUINavigationBar.m */,
+			);
+			name = "Navigation Controller";
+			sourceTree = "<group>";
+		};
 		435B0B0B12E5B0ED00A97B55 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -301,6 +332,9 @@
 				435519F7138FCE210080F87C /* TabTwoController.h */,
 				435519F8138FCE210080F87C /* TabTwoController.m */,
 				435519F9138FCE210080F87C /* TabTwoController.xib */,
+				43551DDE1392904C0080F87C /* TabThreeController.h */,
+				43551DDF1392904C0080F87C /* TabThreeController.m */,
+				43551DE01392904C0080F87C /* TabThreeController.xib */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -468,6 +502,8 @@
 				435519F6138FCE1A0080F87C /* TabOneController.xib in Resources */,
 				435519FB138FCE210080F87C /* TabTwoController.xib in Resources */,
 				43551B44138FE3E80080F87C /* SwitchTabBar.xib in Resources */,
+				43551CBD13903B6B0080F87C /* NMNavigationController.xib in Resources */,
+				43551DE21392904C0080F87C /* TabThreeController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -533,6 +569,10 @@
 				435519FA138FCE210080F87C /* TabTwoController.m in Sources */,
 				43551A12138FD0410080F87C /* NMUITabBar.m in Sources */,
 				43551B45138FE3E80080F87C /* SwitchTabBar.m in Sources */,
+				43551CBC13903B6B0080F87C /* NMNavigationController.m in Sources */,
+				43551DE11392904C0080F87C /* TabThreeController.m in Sources */,
+				43551F6E1392FFB60080F87C /* NMNavigationBar.m in Sources */,
+				43551F71139300D40080F87C /* NMUINavigationBar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

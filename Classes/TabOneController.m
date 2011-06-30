@@ -8,6 +8,8 @@
 
 #import "TabOneController.h"
 
+#import "NMNavigationController.h"
+
 
 @implementation TabOneController
 
@@ -18,6 +20,8 @@
 	NSLog(@"-----");
 	NSLog(@"%@ (animated: %@)", prefix, (animated ? @"YES" : @"NO"));
 	NSLog(@"isLoaded? %@", ([self isViewLoaded] ? @"YES" : @"NO"));
+	NSLog(@"navVC: %@", self.navigationController);
+	NSLog(@"nmNavVC: %@", self.nmNavigationController);
 	
 	if ([self isViewLoaded]) {
 		NSLog(@"superview: %@", self.view.superview);
