@@ -63,7 +63,7 @@
 @property (nonatomic, retain) IBOutlet UIView *viewControllerContainer;
 @property (nonatomic, retain) IBOutlet UIView *tabBarContainer;
 
-@property (nonatomic, assign) id<NMTabBarControllerDelegate> delegate;
+@property (nonatomic, assign) IBOutlet id<NMTabBarControllerDelegate> delegate;
 @property (nonatomic, retain) NSArray* viewControllers;
 @property (nonatomic, assign) NSUInteger selectedIndex;
 @property (nonatomic, assign) UIViewController* selectedViewController;

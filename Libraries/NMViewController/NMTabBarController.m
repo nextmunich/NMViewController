@@ -244,7 +244,7 @@
 	self.selectedIndex = selectedIndex;
 }
 
-- (void)viewWillDisappear:(BOOL)animated {
+- (void)viewDidDisappear:(BOOL)animated {
 	[super viewWillDisappear:animated];
 	
 	[self hideCurrentViewController];
