@@ -623,6 +623,7 @@
 					"CONFIGURATION_${CONFIGURATION}",
 				);
 				INFOPLIST_FILE = "Resources/NMViewController-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PRODUCT_NAME = NMViewController;
 			};
 			name = Debug;
@@ -639,6 +640,7 @@
 					"CONFIGURATION_${CONFIGURATION}",
 				);
 				INFOPLIST_FILE = "Resources/NMViewController-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PRODUCT_NAME = NMViewController;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -688,6 +690,7 @@
 					"CONFIGURATION_${CONFIGURATION}",
 				);
 				INFOPLIST_FILE = "Resources/NMViewController-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PRODUCT_NAME = NMViewController;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -737,6 +740,7 @@
 					"CONFIGURATION_${CONFIGURATION}",
 				);
 				INFOPLIST_FILE = "Resources/NMViewController-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PRODUCT_NAME = NMViewController;
 			};
 			name = Debug;
@@ -753,6 +757,7 @@
 					"CONFIGURATION_${CONFIGURATION}",
 				);
 				INFOPLIST_FILE = "Resources/NMViewController-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PRODUCT_NAME = NMViewController;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -770,6 +775,7 @@
 					"CONFIGURATION_${CONFIGURATION}",
 				);
 				INFOPLIST_FILE = "Resources/NMViewController-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PRODUCT_NAME = NMViewController;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -788,6 +794,7 @@
 					"CONFIGURATION_${CONFIGURATION}",
 				);
 				INFOPLIST_FILE = "Resources/NMViewController-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PRODUCT_NAME = NMViewController;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -836,6 +843,7 @@
 					"CONFIGURATION_${CONFIGURATION}",
 				);
 				INFOPLIST_FILE = "Resources/NMViewController-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PRODUCT_NAME = NMViewController;
 				VALIDATE_PRODUCT = YES;
 			};

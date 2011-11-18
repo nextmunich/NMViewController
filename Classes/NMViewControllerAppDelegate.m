@@ -32,25 +32,25 @@
 	// setup of NMTabBarController before view is loaded
 #ifdef UITABBAR
 	nmTabBarController.tabBar = [[[NMUITabBar alloc] init] autorelease];
+    
+    nmNavigationController.navigationBar = [[[NMUINavigationBar alloc] init] autorelease];
+	[nmNavigationController pushViewController:tabOneController animated:NO];
+	[window addSubview:nmNavigationController.view];
+	[self performSelector:@selector(nmPushVC:) withObject:tabTwoController afterDelay:5];
+    
+    //navigationController = [[UINavigationController alloc] initWithRootViewController:tabOneController];
+	//[window addSubview:navigationController.view];
+	//[self performSelector:@selector(pushVC:) withObject:tabTwoController afterDelay:5];
 #elif SWITCHTABBAR
 	nmTabBarController.tabBar = [[[SwitchTabBar alloc] init] autorelease];
-#endif
-	
-	//nmTabBarController.viewControllers = [NSArray arrayWithObjects:tabOneController, tabTwoController, nil];
-	//[window addSubview:nmTabBarController.view];
+    
+    nmTabBarController.viewControllers = [NSArray arrayWithObjects:tabOneController, tabTwoController, nil];
+	[window addSubview:nmTabBarController.view];
 	
 	//tabBarController = [[UITabBarController alloc] init];
 	//tabBarController.viewControllers = nmTabBarController.viewControllers;
 	//[window addSubview:tabBarController.view];
-	
-	nmNavigationController.navigationBar = [[[NMUINavigationBar alloc] init] autorelease];
-	[nmNavigationController pushViewController:tabOneController animated:NO];
-	[window addSubview:nmNavigationController.view];
-	[self performSelector:@selector(nmPushVC:) withObject:tabTwoController afterDelay:5];
-	
-	//navigationController = [[UINavigationController alloc] initWithRootViewController:tabOneController];
-	//[window addSubview:navigationController.view];
-	//[self performSelector:@selector(pushVC:) withObject:tabTwoController afterDelay:5];
+#endif
 	
     [window makeKeyAndVisible];
 	

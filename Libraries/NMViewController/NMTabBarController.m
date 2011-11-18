@@ -48,6 +48,8 @@
 
 - (void)addTabBarAsSubview;
 
+- (NSComparisonResult)compareSystemVersionWithVersion:(NSString *)version;
+
 @end
 
 
@@ -147,17 +149,24 @@
 	// the VC's view is added to its container before the controller is sent the
 	// -viewWillAppear: message
 	[viewControllerContainer addSubview:self.selectedViewController.view];
-	[vc viewWillAppear:NO];
-	[vc viewDidAppear:NO];
+    
+    if ([self compareSystemVersionWithVersion:(@"5.0")] == NSOrderedAscending) {
+        [vc viewWillAppear:NO];
+        [vc viewDidAppear:NO];
+    }
 }
 
 - (void)hideViewController:(UIViewController *)vc {
-	[vc viewWillDisappear:NO];
+    if ([self compareSystemVersionWithVersion:(@"5.0")] == NSOrderedAscending) {
+        [vc viewWillDisappear:NO];
+    }
 	// mimics the behavior of UITabBarController:
 	// the VC's view is removed from the superview before it is sent
 	// the -viewDidDisappear: message
 	[vc.view removeFromSuperview];
-	[vc viewDidDisappear:NO];	
+    if ([self compareSystemVersionWithVersion:(@"5.0")] == NSOrderedAscending) {
+        [vc viewDidDisappear:NO];
+    }
 }
 
 
@@ -256,6 +265,12 @@
 	[tabBar removeFromSuperview];
 	self.viewControllerContainer = nil;
 	self.tabBarContainer = nil;
+}
+
+#pragma mark Version Helper
+
+- (NSComparisonResult)compareSystemVersionWithVersion:(NSString *)version {
+    return [[[UIDevice currentDevice] systemVersion] compare:version options:NSNumericSearch];
 }
 
 @end

@@ -71,6 +71,8 @@ typedef enum {
 
 - (void)addNavigationBarAsSubview;
 
+- (NSComparisonResult)compareSystemVersionWithVersion:(NSString *)version;
+
 @end
 
 
@@ -116,8 +118,11 @@ typedef enum {
 			[self applyPostion:NMNavigationControllerPositionCurrent toViewController:destinationController];
 			destinationController.view.autoresizingMask = (UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight);
 			[self.contentContainerView addSubview:destinationController.view];
-			[destinationController viewWillAppear:NO];
-			[destinationController viewDidAppear:NO];
+            
+            if ([self compareSystemVersionWithVersion:(@"5.0")] == NSOrderedAscending) {
+                [destinationController viewWillAppear:NO];
+                [destinationController viewDidAppear:NO];
+            }
 		} else {
 			// animated transition from a non-empty stack to a non-empty stack
 			// --> determine transition information and animate if necessary
@@ -286,11 +291,16 @@ typedef enum {
 	[self applyPostion:destinationStartPosition toViewController:destinationController];
 	destinationController.view.autoresizingMask = (UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight);
 	[self.contentContainerView addSubview:destinationController.view];
-	[destinationController viewWillAppear:isAnimated];
+    
+    if ([self compareSystemVersionWithVersion:(@"5.0")] == NSOrderedAscending) {
+        [destinationController viewWillAppear:isAnimated];
+    }
 	
 	// prepare current vc
 	UIViewController *currentController = [[self.topViewController retain] autorelease];
-	[currentController viewWillDisappear:isAnimated];
+    if ([self compareSystemVersionWithVersion:(@"5.0")] == NSOrderedAscending) {
+        [currentController viewWillDisappear:isAnimated];
+    }
 	
 	// correct view controller stack
 	[viewControllers removeLastObject];
@@ -303,13 +313,17 @@ typedef enum {
 						 [self applyPostion:currentFinalPosition toViewController:currentController];
 					 }
 					 completion:^(BOOL finished) {
-						 [destinationController viewDidAppear:isAnimated];
+                         if ([self compareSystemVersionWithVersion:(@"5.0")] == NSOrderedAscending) {
+                             [destinationController viewDidAppear:isAnimated];
+                         }
 
 						 [currentController.view removeFromSuperview];
 						 if (transition == NMNavigationControllerTransitionPop) {
 							 currentController.nmNavigationController = nil;
 						 }
-						 [currentController viewDidDisappear:isAnimated];
+                         if ([self compareSystemVersionWithVersion:(@"5.0")] == NSOrderedAscending) {
+                             [currentController viewDidDisappear:isAnimated];
+                         }
 						 
 						 if (transition == NMNavigationControllerTransitionPush) {
 							 if ([delegate respondsToSelector:@selector(navigationController:didPushViewController:)]) {
@@ -499,6 +513,12 @@ typedef enum {
 			[vc.view removeFromSuperview];
 		}
 	}
+}
+
+#pragma mark Version Helper
+
+- (NSComparisonResult)compareSystemVersionWithVersion:(NSString *)version {
+    return [[[UIDevice currentDevice] systemVersion] compare:version options:NSNumericSearch];
 }
 
 @end
