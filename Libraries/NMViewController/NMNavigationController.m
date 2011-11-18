@@ -470,7 +470,9 @@ typedef enum {
 		[self applyPostion:NMNavigationControllerPositionCurrent toViewController:vc];
 		vc.view.autoresizingMask = (UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight);
 		[self.contentContainerView addSubview:vc.view];
-		[vc viewWillAppear:animated];
+		if ([self compareSystemVersionWithVersion:(@"5.0")] == NSOrderedAscending) {
+            [vc viewWillAppear:animated];
+        }
 	}
 }
 
@@ -479,14 +481,18 @@ typedef enum {
 	
 	if ([viewControllers count] > 0) {
 		UIViewController *vc = [viewControllers lastObject];
-		[vc viewDidAppear:animated];
+		if ([self compareSystemVersionWithVersion:(@"5.0")] == NSOrderedAscending) {
+            [vc viewDidAppear:animated];
+        }
 	}
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
 	if ([viewControllers count] > 0) {
 		UIViewController *vc = [viewControllers lastObject];
-		[vc viewWillDisappear:animated];
+		if ([self compareSystemVersionWithVersion:(@"5.0")] == NSOrderedAscending) {
+            [vc viewWillDisappear:animated];
+        }
 	}
 	
 	[super viewWillDisappear:animated];
@@ -496,7 +502,9 @@ typedef enum {
 	if ([viewControllers count] > 0) {
 		UIViewController *vc = [viewControllers lastObject];
 		[vc.view removeFromSuperview];
-		[vc viewDidDisappear:animated];
+		if ([self compareSystemVersionWithVersion:(@"5.0")] == NSOrderedAscending) {
+            [vc viewDidDisappear:animated];
+        } 
 	}
 	
 	[super viewDidDisappear:animated];
