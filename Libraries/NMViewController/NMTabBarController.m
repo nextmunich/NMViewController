@@ -69,7 +69,7 @@
 	// remember new view controllers
 	if (viewControllers != vcs) {
 		[viewControllers release];
-		viewControllers = [vcs retain];
+		viewControllers = [[NSMutableArray alloc] initWithArray:vcs];
 	}
 	[tabBar setTabsForViewControllers:viewControllers];
 	
