@@ -51,6 +51,8 @@
 
 - (void)addTabBarAsSubview;
 
+- (NSComparisonResult)compareSystemVersionWithVersion:(NSString *)version;
+
 @end
 
 
@@ -156,6 +158,7 @@
 
 - (void)hideViewController:(UIViewController *)vc {
 	if (!UIKIT_FORWARDS_APPEARANCE()) [vc viewWillDisappear:NO];
+
 	// mimics the behavior of UITabBarController:
 	// the VC's view is removed from the superview before it is sent
 	// the -viewDidDisappear: message
@@ -247,8 +250,8 @@
 	self.selectedIndex = selectedIndex;
 }
 
-- (void)viewWillDisappear:(BOOL)animated {
-	[super viewWillDisappear:animated];
+- (void)viewDidDisappear:(BOOL)animated {
+	[super viewDidDisappear:animated];
 	
 	[self hideCurrentViewController];
 }

@@ -73,6 +73,8 @@ typedef enum {
 
 - (void)addNavigationBarAsSubview;
 
+- (NSComparisonResult)compareSystemVersionWithVersion:(NSString *)version;
+
 @end
 
 
