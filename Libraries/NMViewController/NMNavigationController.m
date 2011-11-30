@@ -42,6 +42,8 @@
 #import "NMViewController.h"
 
 
+#define UIKIT_FORWARDS_APPEARANCE() [UIViewController instancesRespondToSelector:@selector(automaticallyForwardAppearanceAndRotationMethodsToChildViewControllers)]
+
 #define ANIMATIONDURATION 0.3 // in seconds
 
 
@@ -116,8 +118,8 @@ typedef enum {
 			[self applyPostion:NMNavigationControllerPositionCurrent toViewController:destinationController];
 			destinationController.view.autoresizingMask = (UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight);
 			[self.contentContainerView addSubview:destinationController.view];
-			[destinationController viewWillAppear:NO];
-			[destinationController viewDidAppear:NO];
+			if (!UIKIT_FORWARDS_APPEARANCE()) [destinationController viewWillAppear:NO];
+			if (!UIKIT_FORWARDS_APPEARANCE()) [destinationController viewDidAppear:NO];
 		} else {
 			// animated transition from a non-empty stack to a non-empty stack
 			// --> determine transition information and animate if necessary
@@ -286,11 +288,11 @@ typedef enum {
 	[self applyPostion:destinationStartPosition toViewController:destinationController];
 	destinationController.view.autoresizingMask = (UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight);
 	[self.contentContainerView addSubview:destinationController.view];
-	[destinationController viewWillAppear:isAnimated];
+	if (!UIKIT_FORWARDS_APPEARANCE()) [destinationController viewWillAppear:isAnimated];
 	
 	// prepare current vc
 	UIViewController *currentController = [[self.topViewController retain] autorelease];
-	[currentController viewWillDisappear:isAnimated];
+	if (!UIKIT_FORWARDS_APPEARANCE()) [currentController viewWillDisappear:isAnimated];
 	
 	// correct view controller stack
 	[viewControllers removeLastObject];
@@ -303,13 +305,13 @@ typedef enum {
 						 [self applyPostion:currentFinalPosition toViewController:currentController];
 					 }
 					 completion:^(BOOL finished) {
-						 [destinationController viewDidAppear:isAnimated];
+						 if (!UIKIT_FORWARDS_APPEARANCE()) [destinationController viewDidAppear:isAnimated];
 
 						 [currentController.view removeFromSuperview];
 						 if (transition == NMNavigationControllerTransitionPop) {
 							 currentController.nmNavigationController = nil;
 						 }
-						 [currentController viewDidDisappear:isAnimated];
+						 if (!UIKIT_FORWARDS_APPEARANCE()) [currentController viewDidDisappear:isAnimated];
 						 
 						 if (transition == NMNavigationControllerTransitionPush) {
 							 if ([delegate respondsToSelector:@selector(navigationController:didPushViewController:)]) {
@@ -456,7 +458,7 @@ typedef enum {
 		[self applyPostion:NMNavigationControllerPositionCurrent toViewController:vc];
 		vc.view.autoresizingMask = (UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight);
 		[self.contentContainerView addSubview:vc.view];
-		[vc viewWillAppear:animated];
+		if (!UIKIT_FORWARDS_APPEARANCE()) [vc viewWillAppear:animated];
 	}
 }
 
@@ -465,14 +467,14 @@ typedef enum {
 	
 	if ([viewControllers count] > 0) {
 		UIViewController *vc = [viewControllers lastObject];
-		[vc viewDidAppear:animated];
+		if (!UIKIT_FORWARDS_APPEARANCE()) [vc viewDidAppear:animated];
 	}
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
 	if ([viewControllers count] > 0) {
 		UIViewController *vc = [viewControllers lastObject];
-		[vc viewWillDisappear:animated];
+		if (!UIKIT_FORWARDS_APPEARANCE()) [vc viewWillDisappear:animated];
 	}
 	
 	[super viewWillDisappear:animated];
@@ -482,7 +484,7 @@ typedef enum {
 	if ([viewControllers count] > 0) {
 		UIViewController *vc = [viewControllers lastObject];
 		[vc.view removeFromSuperview];
-		[vc viewDidDisappear:animated];
+		if (!UIKIT_FORWARDS_APPEARANCE()) [vc viewDidDisappear:animated];
 	}
 	
 	[super viewDidDisappear:animated];

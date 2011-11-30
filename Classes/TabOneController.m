@@ -22,6 +22,7 @@
 	NSLog(@"isLoaded? %@", ([self isViewLoaded] ? @"YES" : @"NO"));
 	NSLog(@"navVC: %@", self.navigationController);
 	NSLog(@"nmNavVC: %@", self.nmNavigationController);
+    NSLog(@"child controller: %@", self.nmNavigationController.childViewControllers);
 	
 	if ([self isViewLoaded]) {
 		NSLog(@"superview: %@", self.view.superview);
@@ -53,13 +54,19 @@
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     // Overriden to allow any orientation.
+    NSLog(@"-----");
+    NSLog(@"shouldAutorotate");
     return YES;
 }
 
-
 - (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
+    NSLog(@"-----");
 	NSLog(@"willAnimate");
 }
 
+- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
+    NSLog(@"-----");
+    NSLog(@"didRotate");
+}
 
 @end

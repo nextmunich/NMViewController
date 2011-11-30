@@ -36,17 +36,17 @@
 	nmTabBarController.tabBar = [[[SwitchTabBar alloc] init] autorelease];
 #endif
 	
-	//nmTabBarController.viewControllers = [NSArray arrayWithObjects:tabOneController, tabTwoController, nil];
-	//[window addSubview:nmTabBarController.view];
+	nmTabBarController.viewControllers = [NSArray arrayWithObjects:tabOneController, tabTwoController, nil];
+	[window addSubview:nmTabBarController.view];
 	
 	//tabBarController = [[UITabBarController alloc] init];
 	//tabBarController.viewControllers = nmTabBarController.viewControllers;
 	//[window addSubview:tabBarController.view];
 	
-	nmNavigationController.navigationBar = [[[NMUINavigationBar alloc] init] autorelease];
-	[nmNavigationController pushViewController:tabOneController animated:NO];
-	[window addSubview:nmNavigationController.view];
-	[self performSelector:@selector(nmPushVC:) withObject:tabTwoController afterDelay:5];
+	//nmNavigationController.navigationBar = [[[NMUINavigationBar alloc] init] autorelease];
+	//[nmNavigationController pushViewController:tabOneController animated:NO];
+	//[window addSubview:nmNavigationController.view];
+	//[self performSelector:@selector(nmPushVC:) withObject:tabTwoController afterDelay:5];
 	
 	//navigationController = [[UINavigationController alloc] initWithRootViewController:tabOneController];
 	//[window addSubview:navigationController.view];
@@ -55,10 +55,9 @@
     [window makeKeyAndVisible];
 	
 	
-	UITapGestureRecognizer *r = [[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(doubleTap)] autorelease];
-	r.numberOfTapsRequired = 2;
-	
-	[window addGestureRecognizer:r];
+	//UITapGestureRecognizer *r = [[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(doubleTap)] autorelease];
+	//r.numberOfTapsRequired = 2;
+	//[window addGestureRecognizer:r];
 	
 	
 	return YES;

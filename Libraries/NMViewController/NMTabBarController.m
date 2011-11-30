@@ -38,6 +38,9 @@
 #import "NMTabBarController.h"
 
 
+#define UIKIT_FORWARDS_APPEARANCE() [UIViewController instancesRespondToSelector:@selector(automaticallyForwardAppearanceAndRotationMethodsToChildViewControllers)]
+
+
 @interface NMTabBarController (Private)
 
 - (void)showCurrentViewController;
@@ -66,8 +69,8 @@
 	
 	// remember new view controllers
 	if (viewControllers != vcs) {
-		[viewControllers removeAllObjects];
-		[viewControllers addObjectsFromArray:vcs];
+		[viewControllers release];
+		viewControllers = [[NSMutableArray alloc] initWithArray:vcs];
 	}
 	[tabBar setTabsForViewControllers:viewControllers];
 	
@@ -119,13 +122,6 @@
 }
 
 
-#pragma mark iOS 5 Compatibility
-
-- (BOOL)automaticallyForwardAppearanceAndRotationMethodsToChildViewControllers {
-    return NO;
-}
-
-
 #pragma mark Helper Methods
 
 - (void)showCurrentViewController {
@@ -154,17 +150,17 @@
 	// the VC's view is added to its container before the controller is sent the
 	// -viewWillAppear: message
 	[viewControllerContainer addSubview:self.selectedViewController.view];
-	[vc viewWillAppear:NO];
-	[vc viewDidAppear:NO];
+	if (!UIKIT_FORWARDS_APPEARANCE()) [vc viewWillAppear:NO];
+	if (!UIKIT_FORWARDS_APPEARANCE()) [vc viewDidAppear:NO];
 }
 
 - (void)hideViewController:(UIViewController *)vc {
-	[vc viewWillDisappear:NO];
+	if (!UIKIT_FORWARDS_APPEARANCE()) [vc viewWillDisappear:NO];
 	// mimics the behavior of UITabBarController:
 	// the VC's view is removed from the superview before it is sent
 	// the -viewDidDisappear: message
 	[vc.view removeFromSuperview];
-	[vc viewDidDisappear:NO];	
+	if (!UIKIT_FORWARDS_APPEARANCE()) [vc viewDidDisappear:NO];	
 }
 
 
