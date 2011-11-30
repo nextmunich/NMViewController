@@ -66,8 +66,8 @@
 	
 	// remember new view controllers
 	if (viewControllers != vcs) {
-		[viewControllers release];
-		viewControllers = [vcs retain];
+		[viewControllers removeAllObjects];
+		[viewControllers addObjectsFromArray:vcs];
 	}
 	[tabBar setTabsForViewControllers:viewControllers];
 	
@@ -116,6 +116,13 @@
 	}
 	
 	if ([self isViewLoaded]) [self addTabBarAsSubview];
+}
+
+
+#pragma mark iOS 5 Compatibility
+
+- (BOOL)automaticallyForwardAppearanceAndRotationMethodsToChildViewControllers {
+    return NO;
 }
 
 

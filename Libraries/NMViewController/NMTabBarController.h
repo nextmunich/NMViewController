@@ -64,7 +64,7 @@
 @property (nonatomic, retain) IBOutlet UIView *tabBarContainer;
 
 @property (nonatomic, assign) id<NMTabBarControllerDelegate> delegate;
-@property (nonatomic, retain) NSArray* viewControllers;
+@property (nonatomic, copy) NSArray* viewControllers;
 @property (nonatomic, assign) NSUInteger selectedIndex;
 @property (nonatomic, assign) UIViewController* selectedViewController;
 // currently, the tab has to be able to fill the whole width of the screen
