@@ -1,3 +1,14 @@
+# Update
+
+Important: iOS 5 changes the way view appearance callbacks are sent to child
+view controllers. On previous iOS versions, a custom container view
+controller was responsible for notifying its child containers of view
+appearance (-viewWillAppear:, -viewDidAppear:, -viewWillDisappear:,
+-viewDidDisappear:). Now this is handled automatically by iOS 5 which leads
+to twice as many calls when working with NMNavigationController or
+NMTabBarController. This has been fixed in the latest update.
+
+
 # Introduction
 
 iOS provides a lot of convenience classes to integrate common UI metaphors into
