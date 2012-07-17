@@ -352,11 +352,11 @@ typedef enum {
 }
 
 - (void)removeViewController:(UIViewController *)vc {
-	[viewControllers removeObject:vc];
 	vc.nmNavigationController = nil;
 	if ([vc isViewLoaded] && vc.view.superview != nil) {
 		[vc.view removeFromSuperview];
 	}
+	[viewControllers removeObject:vc];
 }
 
 - (void)applyPostion:(NMNavigationControllerPosition)position toViewController:(UIViewController *)vc {
